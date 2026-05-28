@@ -9,3 +9,11 @@ function imprimetabla(numerazo){
         console.log(numerazo+"+"+i+"="+suma); 
     }    
 }
+
+function preciofinal(precio,descuento){
+    valordescuento = precio * descuento /100;
+    preciof = precio - valordescuento;
+    return preciof; 
+}
+
+
