@@ -1,6 +1,6 @@
-const texto = "Mensaje secreto";
+const texto = "Edwin Paredes";
 
-const clave = 25;
+const clave = 17;
 
 // Encriptar
 let cifrado = "";
@@ -11,11 +11,10 @@ for(let i = 0; i < texto.length; i++) {
     );
 }
 
-
 console.log(cifrado);
 
 // Desencriptar
-cifrado = "f~z~9~|~"
+//cifrado = "Tzzr1kĂzxr"
 let original = "";
 
 for(let i = 0; i < cifrado.length; i++) {
