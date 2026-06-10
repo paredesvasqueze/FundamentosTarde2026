@@ -33,7 +33,7 @@ function calcularsueldo(nombre,ht, sh,anios)
     sueldo = ht * sh;
     bono =  calcularbono(anios);
     sueldototal = sueldo + bono;
-    console.log("Sr "+nombre+" sueldo es : "+sueldototal )
+    console.log("Sr "+nombre+"\n sueldo es : "+sueldototal )
 
 }
 
