@@ -20,4 +20,12 @@ function agregar()
     llenatabla();
 }
 
+function eliminar()
+{    
+    animales.pop();
+    llenatabla();
+}
+
+
+
 llenatabla();
