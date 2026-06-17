@@ -16,7 +16,11 @@ midiv.innerHTML = tabla;
 function agregar()
 {
     let textoanimalito = document.getElementById("animalito").value;    
+    if(textoanimalito.trim() == "")
+        alert("No puedes dejar este campo vacìo");
+    else
     animales.push(textoanimalito);
+
     llenatabla();
 }
 
@@ -25,7 +29,5 @@ function eliminar()
     animales.pop();
     llenatabla();
 }
-
-
 
 llenatabla();
