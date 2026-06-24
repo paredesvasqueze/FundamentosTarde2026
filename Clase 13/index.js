@@ -30,3 +30,14 @@ function mostrarmensaje()
 {
     alert("moviste el mouse dentro");
 }
+
+function sepresiono()
+{
+    document.getElementById("mensaje").innerHTML ="se presiono";
+}
+
+function solto()
+{
+    document.getElementById("mensaje").innerHTML ="solto";
+}
+
