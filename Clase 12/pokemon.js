@@ -6,7 +6,7 @@ async function buscarPokemon()
 {
     let respuesta =
     await fetch(
-        "https://pokeapi.co/api/v2/pokemon/ivysaur"
+        "https://pokeapi.co/api/v2/pokemon/pikachu"
     );
 
     let pokemon =
@@ -16,6 +16,7 @@ async function buscarPokemon()
     console.log(pokemon.abilities[1].ability.name);
     console.log(pokemon.abilities[0].is_hidden);
     miimagen.src = pokemon.sprites.front_default;
+        
 }
 
 buscarPokemon();
