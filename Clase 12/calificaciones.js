@@ -1,4 +1,13 @@
-let alumnos =[];
+let alumnos =[
+        {          
+        nombre: "Edwin",
+        nota1 : 10,
+        nota2 : 10,
+        nota3 : 10,
+        fecharegistro : new Date().toLocaleString()
+        }
+        
+];
 const nombre = document.getElementById("nombre");
 const nota1 = document.getElementById("nota1");
 const nota2 = document.getElementById("nota2");
@@ -7,6 +16,7 @@ const btnagregar = document.getElementById("btnagregar");
 const btneliminarultimo = document.getElementById("btneliminarultimo");
 const cuerpo = document.getElementById("cuerpo");
 const exportar = document.getElementById("exportar");
+const modal = document.getElementById("mimodal");
 /*
 btneliminarultimo.addEventListener("click",()=>
     {
@@ -60,6 +70,7 @@ function mostrar()
                 "<td>" + alumnos[i].nota3 + "</td>" +
                 "<td>" + alumnos[i].fecharegistro + "</td>" +
                 "<td><button onclick='eliminar("+i+")' >Eliminar</button></td>" +
+                "<td><button onclick='mostrarmodal("+i+")' >Actualizar</button></td>" +
                 "</tr>"
     }
  cuerpo.innerHTML = filas;
@@ -71,3 +82,10 @@ function eliminar(i)
     alumnos.splice(i,1);
     mostrar();
 }
+
+function mostrarmodal(i)
+{
+    modal.showModal();
+}
+
+mostrar(); 
