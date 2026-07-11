@@ -6,17 +6,28 @@ let alumnos =[
         nota3 : 10,
         fecharegistro : new Date().toLocaleString()
         }
-        
+
 ];
 const nombre = document.getElementById("nombre");
 const nota1 = document.getElementById("nota1");
 const nota2 = document.getElementById("nota2");
 const nota3 = document.getElementById("nota3");
+
+const idmodal = document.getElementById("indicemodal");
+const nombremodal = document.getElementById("nombremodal");
+const nota1modal = document.getElementById("nota1modal");
+const nota2modal = document.getElementById("nota2modal");
+const nota3modal = document.getElementById("nota3modal");
+const btnactualizarmodal = document.getElementById("btnactualizarmodal");
+const btncerrarmodal = document.getElementById("btncerrarmodal");
+
 const btnagregar = document.getElementById("btnagregar");
 const btneliminarultimo = document.getElementById("btneliminarultimo");
 const cuerpo = document.getElementById("cuerpo");
 const exportar = document.getElementById("exportar");
 const modal = document.getElementById("mimodal");
+
+
 /*
 btneliminarultimo.addEventListener("click",()=>
     {
@@ -85,7 +96,31 @@ function eliminar(i)
 
 function mostrarmodal(i)
 {
+    idmodal.value = i;
+    nombremodal.value = alumnos[i].nombre;
+    nota1modal.value = alumnos[i].nota1;
+    nota2modal.value = alumnos[i].nota2;
+    nota3modal.value = alumnos[i].nota3;
     modal.showModal();
 }
+
+btnactualizarmodal.addEventListener("click",()=>{
+    let alumno = {
+        nombre : nombremodal.value,
+        nota1 : nota1modal.value,
+        nota2 : nota2modal.value,
+        nota3 : nota3modal.value,
+        fecharegistro : new Date().toLocaleString()
+    }    
+
+    let i = idmodal.value;    
+    alumnos[i] = alumno;
+    mostrar();
+    modal.close();     
+});
+
+btncerrarmodal.addEventListener("click",()=>{    
+    modal.close();     
+})
 
 mostrar(); 
