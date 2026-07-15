@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Agenda de Contactos</h1>
+    <br>
+    <button id="btnnuevo">+Nuevo Contacto</button>
+
+    <table border = 1>
+        <thead>
+            <th>Foto</th>
+            <th>DNI</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody id="cuerpo">
+        </tbody>
+    </table>
+
+    <dialog id="dialognuevo">
+
+        <h2>Nuevo Contacto</h2>
+        <label>Foto</label> <input id="foto" type="file"> <br>
+        <img style="width: 100px ; height: 100px;" id="preview"> <br>
+                
+        <label>DNI</label><input type="text"><br>
+        <label>Nombre</label><input type="text"><br>
+        <label>Apellidos</label><input type="text"><br>
+        <label>Telefono</label><input type="tel"><br>
+        <label>Correo</label><input type="email"><br>       
+
+        <button id="nuevo">Guardar</button>
+
+
+    </dialog>
+    <script src="index.js"></script>
+</body>
+</html>
